@@ -1,0 +1,13 @@
+#macro (header)
+NAME,ADDRESS,CAPITAL
+#end
+#macro (datapart $feed)
+#foreach( $rowSet in $feed.feedData)
+$velocityCount　：　$!{rowSet.get("NAME")},$!{rowSet.get("ADDRESS")},$!{rowSet.get("CAPITAL")}
+#end
+#end
+##*******************
+##CSV開始
+##*******************
+#header()
+#datapart($feed)

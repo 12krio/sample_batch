@@ -1,0 +1,6 @@
+TransactionId${DELIMETER}Amount${DELIMETER}ExecutionDate ${DELIMETER}Currency${DELIMETER}Status
+#foreach( $rowSet in $feed.feedData)
+#foreach( $key in $rowSet.keySet())
+$!{rowSet.get("TransactionId")}$DELIMETER$!rowSet.get("Amount")$DELIMETER$!rowSet.get("ExecutionDate")$DELIMETER$!rowSet.get("Currency")$DELIMETER$!rowSet.get("Status")
+#end
+#end
